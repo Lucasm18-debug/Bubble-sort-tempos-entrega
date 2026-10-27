@@ -2,6 +2,17 @@
 
 #define QUANTIDADE 10
 
+// Exibe todos os tempos armazenados no array.
+void exibirTempos(const float tempos[], int quantidade) {
+    int i;
+
+    for (i = 0; i < quantidade; i++) {
+        printf("%.2f ", tempos[i]);
+    }
+
+    printf("\n");
+}
+
 int main(void) {
     float tempos[QUANTIDADE];
     float auxiliar;
@@ -25,12 +36,7 @@ int main(void) {
 
     // Exibe o array antes da ordenacao.
     printf("\nTempos antes da ordenacao:\n");
-
-    for (i = 0; i < QUANTIDADE; i++) {
-        printf("%.2f ", tempos[i]);
-    }
-
-    printf("\n");
+    exibirTempos(tempos, QUANTIDADE);
 
     // Bubble Sort: percorre o array em varias passagens.
     for (i = 0; i < QUANTIDADE - 1; i++) {
@@ -49,12 +55,8 @@ int main(void) {
 
     // Exibe o array depois da ordenacao crescente.
     printf("\nTempos depois da ordenacao:\n");
-
-    for (i = 0; i < QUANTIDADE; i++) {
-        printf("%.2f ", tempos[i]);
-    }
-
-    printf("\n\n");
+    exibirTempos(tempos, QUANTIDADE);
+    printf("\n");
 
     // Em ordem crescente, o primeiro e o ultimo
     // elementos contem o menor e o maior tempo.
