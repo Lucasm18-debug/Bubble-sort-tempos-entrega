@@ -4,23 +4,26 @@
 
 int main(void) {
     float tempos[QUANTIDADE];
-    int i;
+    float auxiliar;
+    int i, j;
 
-    printf("CLASSIFICADOR DE TEMPOS DE ENTREGA\n");
-    printf("Informe os tempos em minutos.\n\n");
+    printf("========================================\n");
+    printf(" CLASSIFICADOR DE TEMPOS DE ENTREGA\n");
+    printf(" Criterio: ordem crescente\n");
+    printf("========================================\n\n");
 
-    // Recebe os dez tempos informados pelo usuario.
+    // Recebe os tempos de entrega informados pelo usuario.
     for (i = 0; i < QUANTIDADE; i++) {
-        printf("Tempo da entrega %d: ", i + 1);
+        printf("Tempo da entrega %d, em minutos: ", i + 1);
 
-        // Verifica se a entrada e numerica e nao negativa.
+        // Aceita somente entradas numericas nao negativas.
         if (scanf("%f", &tempos[i]) != 1 || tempos[i] < 0) {
             printf("Entrada invalida. Informe um numero nao negativo.\n");
             return 1;
         }
     }
 
-    // Mostra os dados antes da ordenacao.
+    // Exibe o array antes da ordenacao.
     printf("\nTempos antes da ordenacao:\n");
 
     for (i = 0; i < QUANTIDADE; i++) {
@@ -28,6 +31,36 @@ int main(void) {
     }
 
     printf("\n");
+
+    // Bubble Sort: percorre o array em varias passagens.
+    for (i = 0; i < QUANTIDADE - 1; i++) {
+
+        // Compara elementos adjacentes ainda nao ordenados.
+        for (j = 0; j < QUANTIDADE - 1 - i; j++) {
+
+            // Se estiverem na ordem errada, troca os valores.
+            if (tempos[j] > tempos[j + 1]) {
+                auxiliar = tempos[j];
+                tempos[j] = tempos[j + 1];
+                tempos[j + 1] = auxiliar;
+            }
+        }
+    }
+
+    // Exibe o array depois da ordenacao crescente.
+    printf("\nTempos depois da ordenacao:\n");
+
+    for (i = 0; i < QUANTIDADE; i++) {
+        printf("%.2f ", tempos[i]);
+    }
+
+    printf("\n\n");
+
+    // Em ordem crescente, o primeiro e o ultimo
+    // elementos contem o menor e o maior tempo.
+    printf("Entrega mais rapida: %.2f minutos\n", tempos[0]);
+    printf("Entrega mais demorada: %.2f minutos\n",
+           tempos[QUANTIDADE - 1]);
 
     return 0;
 }
