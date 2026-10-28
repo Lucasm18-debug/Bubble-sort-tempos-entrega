@@ -6,7 +6,7 @@
 - **Curso:** Engenharia de Software
 - **Disciplina:** Algoritmos e Pensamento Computacional
 - **Professora:** Karla Roberto Sartin
-- **Integrantes:** Lucas, Gustavo e Daniel.
+- **Integrantes:** Lucas Emanuel, Gustavo Henri e Daniel Silva Martins.
 
 ## 2. Contextualização
 
