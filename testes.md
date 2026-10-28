@@ -64,8 +64,8 @@ Resultado observado: O programa mostrou uma mensagem de erro solicitando apenas 
 
 ## Conclusão
 
-Os testes foram realizados para verificar a ordenação
-crescente, o comportamento com valores já ordenados,
-a inversão da ordem dos valores e a validação de entradas.
+## Conclusão
 
-O programa foi capaz de entender a complexidade dos números positivos, e tambem negativos, logo conseguiu cumprir com todas as expectativas esperadas pelo grupo, sendo assim, o resultado do programa capaz de executar a ordem de números foi satisfatório.
+Os testes verificaram o funcionamento do Bubble Sort com valores fora de ordem, valores já ordenados e valores em ordem inversa. Também foi verificada a rejeição de entradas negativas.
+
+Os resultados observados confirmaram a ordenação crescente e o comportamento esperado para a validação dos dados.
