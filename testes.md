@@ -64,8 +64,6 @@ Resultado observado: O programa mostrou uma mensagem de erro solicitando apenas 
 
 ## Conclusão
 
-## Conclusão
-
 Os testes verificaram o funcionamento do Bubble Sort com valores fora de ordem, valores já ordenados e valores em ordem inversa. Também foi verificada a rejeição de entradas negativas.
 
 Os resultados observados confirmaram a ordenação crescente e o comportamento esperado para a validação dos dados.
